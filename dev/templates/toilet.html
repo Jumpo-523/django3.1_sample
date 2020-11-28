@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    {% load static %}
+{% load static %}
 
 <head>
     <meta charset="utf-8" />
@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script type="text/javascript" src="{% static 'js/logout.js' %}"></script>
-    
+
 </head>
 <style>
     .tab_No_checked:hover {
@@ -168,21 +168,21 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title title mt-5">Product</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link mx-2 tab_No_checked tab_column mb-4 shadow" href="Dashboard.html">
+                <a class="mdl-navigation__link mx-2 tab_No_checked tab_column mb-4 shadow" href="{% url 'dashboard' %}">
                     <svg width="2rem" height="2rem" viewBox="0 0 16 16" class="bi bi-house" style="color:#000000;" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
                     <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
                   </svg>
 
                     <span class="ml-4" style="vertical-align: bottom;color:black;">Home</span></a>
-                <a class="mdl-navigation__link tab_column tab_No_checked mb-2 mx-2" href="shower.html">
+                <a class="mdl-navigation__link tab_column tab_No_checked mb-2 mx-2" href="{% url 'shower' %}">
                     <i class="fas fa-shower ml-1" style="color:rgba(82,195,190,1);font-size: 24px;"></i><span style="margin-left: 2rem!important;">Shower</span>
 
                 </a>
-                <a class="mdl-navigation__link tab_column tab_checked mb-2 mx-2" href="toilet.html">
+                <a class="mdl-navigation__link tab_column tab_checked mb-2 mx-2" href="{% url 'toilet' %}">
                     <i class="fas fa-toilet ml-1" style="color:#ffffff;font-size: 24px;"></i><span style="margin-left: 2.6rem!important;">Toilet</span>
                 </a>
-                <a class="mdl-navigation__link tab_column tab_No_checked mb-2 mx-2" href="curtain.html">
+                <a class="mdl-navigation__link tab_column tab_No_checked mb-2 mx-2" href="{% url 'curtain' %}">
                     <i class="far fa-window-maximize" style="color:#8C1207;font-size: 24px;"></i><span style="margin-left: 2.3rem!important;">Curtain</span>
                 </a>
 
@@ -252,10 +252,10 @@
                     </div>
                 </div>
 
-            <div>
-                <div id="visualization_input" hidden>{{ plot_div }}</div>
-                <div id="area-to-visualize" style="margin: 20px;"></div>
-            </div>
+                <div>
+                    <div id="visualization_input" hidden>{{ plot_div }}</div>
+                    <div id="area-to-visualize" style="margin: 20px;"></div>
+                </div>
 
 
 

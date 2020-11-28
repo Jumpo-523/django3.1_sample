@@ -24,7 +24,10 @@ urlpatterns = [
     # include('django.contrib.auth.urls')
     ),
     # registration/login.htmlを利用する。
-
+    path('', TemplateView.as_view(template_name='curtain.html'), name='curtain'), 
+    path('', TemplateView.as_view(template_name='toilet.html'), name='toilet'), 
+    path('', TemplateView.as_view(template_name='shower.html'), name='shower'), 
+    path('', TemplateView.as_view(template_name='dashboard.html'), name='dashboard'), # new
     path('logout/', TemplateView.as_view(template_name='registration/login.html'), name='home'), # new
     path('', TemplateView.as_view(template_name='registration/login.html'), name='home'), # new
     path('signup/', TemplateView.as_view(template_name='registration/signup.html'), name='signup')
